@@ -42,21 +42,78 @@ mostrarFavoritos();
 
 async function cargarPeliculas() {
 
-    // HACER FETCH
+    const respuesta = await fetch(__________);
+
+    peliculas = await respuesta.__________;
+
+    mostrarPeliculas(__________);
 
 }
 
 
 function mostrarPeliculas(listaPeliculas) {
 
-    // MOSTRAR TARJETAS
+    contenedorPeliculas.innerHTML = ___;
+
+    // Vaciar el contenedor antes de mostrar las películas
+
+    // Recorrer el array recibido como parámetro
+
+        // Crear una tarjeta para cada película
+
+        // Añadir a la tarjeta:
+
+        // - Imagen
+
+        // - Título
+
+        // - Director
+
+        // - Botón "Ver detalle"
+
+        // - Botón "Favorito"
+
+        // Añadir la tarjeta al contenedor
 
 }
 
 
 function mostrarDetalle(id) {
 
-    // MOSTRAR DETALLE
+    // Busca la película seleccionada utilizando el id recibido
+
+    // Cambia la visibilidad de los elementos correspondientes
+
+    vistaDetalle.innerHTML = `
+        <img src="${pelicula.movie_banner}" alt="${pelicula.title}">
+
+        <h2>${pelicula.title}</h2>
+
+        <p>${pelicula.description}</p>
+
+        <br>
+
+        <p>
+            <strong>Director:</strong>
+            ${pelicula.director}
+        </p>
+
+        <p>
+            <strong>Productor:</strong>
+            ${pelicula.producer}
+        </p>
+
+        <p>
+            <strong>Año:</strong>
+            ${pelicula.release_date}
+        </p>
+
+        <br>
+
+        <button onclick="volverALista()">
+            Volver
+        </button>
+    `;
 
 }
 
@@ -71,34 +128,75 @@ function volverALista() {
 
 function agregarFavorito(id) {
 
-    // AÑADIR FAVORITO
+    // Buscar la película cuyo id coincide con el recibido
+
+    // Comprobar si la película ya está en favoritos
+
+    // Si no está:
+    // - Añadirla al array favoritos
+    // - Guardar los favoritos en localStorage
+    // - Actualizar la lista de favoritos mostrada en pantalla
 
 }
 
 
 function eliminarFavorito(id) {
 
-    // ELIMINAR FAVORITO
+    // Eliminar del array favoritos la película cuyo id coincide con el recibido
+
+    // Guardar los cambios en localStorage
+
+    // Actualizar la lista de favoritos mostrada en pantalla
 
 }
 
 
 function mostrarFavoritos() {
 
-    // MOSTRAR FAVORITOS
+    contenedorFavoritos.innerHTML = ____;
+    // Vaciar el contenedor de favoritos
+
+    // Si no hay favoritos:
+
+    // Mostrar un mensaje indicándolo
+
+    // Si hay favoritos:
+
+    // Recorrer el array favoritos
+
+        // Crear un elemento para cada favorito
+
+        // Mostrar el título de la película
+
+        // Añadir un botón para eliminarla
+
+        // Insertar el elemento en el contenedor
 
 }
 
 
 function guardarFavoritos() {
 
-    // GUARDAR EN LOCALSTORAGE
+    localStorage.setItem(
+        "favoritos",
+        ______________________
+    );
 
 }
 
 
 function filtrarPeliculas() {
 
-    // FILTRAR POR TÍTULO
+    // 1. Obtener el texto del buscador
+
+    // 2. Filtrar el array peliculas
+
+    // 3. Mostrar únicamente las películas filtradas
+
+    const texto = _________;
+
+    const resultado = ________;
+
+    mostrarPeliculas(resultado);
 
 }
