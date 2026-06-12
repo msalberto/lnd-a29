@@ -44,7 +44,9 @@ async function cargarPeliculas() {
 
     const respuesta = await fetch(__________);
 
-    peliculas = await respuesta.__________;
+    peliculas = await respuesta.json();
+
+    console.log(peliculas);
 
     mostrarPeliculas(__________);
 
